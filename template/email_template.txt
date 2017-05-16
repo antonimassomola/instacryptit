@@ -1,0 +1,12 @@
+Hello,
+
+You receive this e-mail because someone sent you the following encrypted message.
+
+-------------- BEGIN --------------
+
+{MESSAGE}
+
+--------------- END ---------------
+
+To decrypt this message go to {SITEPATH}/?data=decrypt and paste the encrypted message. 
+* You must know the secret passphrase used to decrypt the message

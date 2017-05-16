@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>InstaCryptIt - Fast & Easy encryption</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="InstaCryptIt - Fast & Easy encryption">
+    <meta name="author" content="Antoni Massó Mola">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800' rel='stylesheet' type='text/css'>
+    <link href="css/flexslider.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link type="text/css" href="js/jquery.keypad/jquery.keypad.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="font/css/font-awesome.min.css">
+    <!--[if IE 7]><link rel="stylesheet" href="font/css/font-awesome-ie7.min.css"><![endif]-->
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+    
+    <script src="js/encryption.js"></script>
+    <script>var bData = false;</script>
+
+  </head>
+
+  <body>
+    
+    <nav>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Insta<strong>Crypt</strong>It</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav pull-right">
+              <li><a class="scroll" id="home-anchor" href="#">Home</a></li>
+              <li><a class="scroll" id="info-anchor" href="#">Info</a></li>
+              <li><a class="scroll" id="encrypt-anchor" name="encrypt-anchor" href="#">Encrypt</a></li>
+              <li><a class="scroll" id="decrypt-anchor" href="#">Decrypt</a></li>
+              <li><a class="scroll" id="newsletter-anchor" href="#">Newsletter</a></li>
+              <li><a class="scroll" id="contact-anchor" href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    </nav>
+    
+    <header class="container home-anchor">
+    <div class="row">
+        <div class="span5">
+            <h1 class="animated fadeInLeftBig animation-delay"><span class="subtitle">The fastest & easiest way</span> to send encrypted e-mails!</h1>
+            <p class="animated fadeInLeftBig animation-delay">Send encrypted e-mails anonymously. All data is encrypted locally in your browser before it's sent over to InstaCryptIt.
+            <a href="#" class="scroll" id="infoslider">How does InstaCryptIt work? »</a></p>
+            <div class="animated fadeInUp buttons-delay"><a class="scroll button hover animated" id="encrypt-anchor" href="#">READY? INSTACRYPTIT!</a></div>
+        </div>
+        <div class="span7 animated fadeInRightBig animation-delay">
+            <div class="notebookslider flexslider">
+              <ul class="slides">
+                <li>
+                  <img src="img/slide1.jpg" />
+                </li>
+                <li>
+                  <img src="img/slide2.jpg" />
+                </li>
+                <li>
+                  <img src="img/slide3.jpg" />
+                </li>
+              </ul>
+            </div>
+        </div>
+    </div>
+    </header>
+    
+    <section id="information" class="container info-anchor">
+        <div class="row infoslider">
+            <div class="span12">
+                <h2 class="text-center">How does InstaCryptIt work?</h2>
+                <p class="text-center">Encrypted. Anonymous. Secure.</p>
+            </div>
+        </div>
+        <div class="row information-table">
+            <div class="span4 information-column-center">
+                <div class="column standard">
+                    <div class="column-header bestprice-header">
+                        <h3 class="text-center package">Encryption</h3>
+                    </div>
+                    <ul class="benefits">
+                        <li>Locally encrypted</li>
+                        <li>AES encryption</li>
+                        <li>You choose the secret passphrase</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span4 information-column-center">
+                <div class="column premium">
+                <div class="column-header">
+                        <h3 class="text-center package">Anonymity</h3>
+                    </div>
+                    <ul class="benefits">
+                        <li>We don't save your information</li>
+                        <li>E-mail is sent through InstaCryptIt servers</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="span4 information-column-center">
+                <div class="column business">
+                    <div class="column-header bestprice-header">
+                        <h3 class="text-center package">Security</h3>
+                    </div>
+                    <ul class="benefits">
+                        <li>Virtual keyboard to bypass keyloggers</li>
+                        <li>New features soon...</li>
+                    </ul>                    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span12"><p class="text-center">Learn more about <strong><a href="http://en.wikipedia.org/wiki/Advanced_Encryption_Standard" target="_blank">AES Encryption</a></strong></p></div>
+        </div>
+    </section>
+
+    <section id="encrypt" class="container encrypt-anchor" anchor="encrypt">
+        <div class="row infoslider">
+            <div class="span12">
+                <h2 class="text-center">InstaCryptIt!</h2>
+            </div>
+        </div>
+
+        <input type="text" id="encrypt-encrypted_message" name="encrypt-encrypted_message" style="display:none;" />
+
+        <div id="encrypt-success" style="display:none; margin-bottom:25px;">
+
+            <div style="background-color:#009530; padding:15px; color: white;">
+                Encrypted e-mail sent! Tell the receiver to check their SPAM mail box.
+            </div>
+            
+            <div style="background-color:#eee; padding:15px; margin-bottom:15px; color: #000;">
+                Data sent:<br>
+                <textarea type="text" id="div-encrypt-encrypted_message" name="div-encrypt-encrypted_message" style="font-size:14px; margin-top:10px; margin-left:10px; margin-bottom:10px; width: 95%"></textarea>
+                <br>
+                <button type="button" onclick="sendAnother();">Send another</button>
+            </div>
+
+        </div>
+
+        <div id="encrypt-error" style="background-color:red; padding:15px; color: white; display:none; margin-bottom:15px;">
+            :( something went wrong! Please try again!
+        </div>
+
+        <div id="encrypt_form" name="encrypt_form">
+            <form method="post" action="">
+              <fieldset>
+                <label>Email*:</label>
+                <input class="input-block-level" type="text" name="encrypt-email" id="encrypt-email" placeholder="email@address.com" style="width:97%; margin-right:5px;">
+
+                <label>Secret Passphrase*:</label>
+                <input class="input-block-level" type="password" name="encrypt-passphrase" id="encrypt-passphrase" placeholder="Secret Passphrase" style="width:97%; margin-right:5px;">
+                
+                <label>Subject*:</label>
+                <input class="input-block-level" type="text" name="encrypt-subject" id="encrypt-subject" placeholder="Subject is not encrypted" style="width:97%; margin-right:5px;">
+                
+                <label>Message*:</label>
+                <textarea id="encrypt-message" class="input-block-level" name="encrypt-message" id="encrypt-message" rows="3" style="width:100%; margin-right:5px;"></textarea> 
+                
+                <div class="row form-submit" style="margin-top:20px;">
+                    <div class="span3">
+                        <button type="button" id="send-encrypt">Encrypt & Send Email</button>
+                    </div>
+                    <div class="span3">
+                        <button type="button" id="send-encrypt-only">Encrypt Only</button>
+                    </div>
+                    <div class="span3">
+                        <p class="form-info text-right">All fields with an * are required.</p>
+                    </div>
+                </div>
+                <input type="hidden" name="type" value="encrypt" />
+              </fieldset>
+            </form>
+        </div>
+
+    </section>
+
+    <section id="decrypt" class="container decrypt-anchor">
+        <div class="row infoslider">
+            <div class="span12">
+                <h2 class="text-center">DecryptIt!</h2>
+            </div>
+        </div>
+
+        <input type="text" id="decrypt-encrypted_message" name="decrypt-encrypted_message" style="display:none;" />
+
+        <div id="decrypt-success" style="display:none; margin-bottom:25px;">
+
+            <div style="background-color:#009530; padding:15px; color: white;">
+                Decrypted message with the passphrase *****
+            </div>
+            
+            <div style="background-color:#eee; padding:15px; margin-bottom:15px; color: #000;">
+                Message:<br>
+                <textarea type="text" id="div-decrypt-encrypted_message" name="div-decrypt-encrypted_message" style="font-size:14px; margin-top:10px; margin-left:10px; margin-bottom:10px; width: 95%"></textarea><br>
+                <button type="button" onclick="decryptAnother();">Decrypt another</button>
+            </div>
+
+        </div>
+
+        <div id="decrypt-error" style="background-color:red; padding:15px; color: white; display:none; margin-bottom:15px;">
+            :( something went wrong! Please try again!
+        </div>
+
+        <div id="decrypt_form" name="decrypt_form">
+            <form method="post" action="">
+              <fieldset>
+                <label>Secret Passphrase*:</label>
+                <input class="input-block-level" type="password" name="decrypt-passphrase" id="decrypt-passphrase" placeholder="Secret Passphrase" style="width:97%; margin-right:5px;">
+                
+                <label>Message*:</label>
+                <textarea id="decrypt-message" class="input-block-level" name="decrypt-message" id="decrypt-message" rows="3"></textarea> 
+                
+                <div class="row form-submit">
+                    <div class="span3">
+                        <button type="button" id="send-decrypt">Decrypt Message</button>
+                    </div>
+                    <div class="span3">
+                        <p class="form-info text-right">All fields with an * are required.</p>
+                    </div>
+                </div>
+                <input type="hidden" name="type" value="decrypt" />
+              </fieldset>
+            </form>
+        </div>
+
+    </section>
+    
+    <section id="newsletter">
+    <div class="container newsletter-anchor">
+        <div class="row">
+            <div class="span8 offset2"><h2><i class="icon-envelope-alt"></i>SignUp To Get The Latest News &amp; Updates</h2></div>
+        </div>
+        <div class="row">
+            <div class="span8 offset2 newsletter-form">
+                <form method="post" action="" id="newsletter-form">
+                  <div class="submit-field">
+                    <input class="submit" type="button" name="send-newsletter" id="send-newsletter" value="Subscribe" />
+                  </div>
+                  <div class="email-field">
+                    <input class="email" type="text" placeholder="Enter Your Email Address" name="newsletter-email" />
+                  </div>
+                  <input type="hidden" name="type" value="newsletter" />
+                </form>
+            </div>
+        </div>
+    </div>
+    </section>
+    
+    <section id="contact" class="container contact-anchor">
+        <div class="row">
+            <div class="span12">
+                <h2><i class="icon-map-marker"></i>Contact</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span6">
+                <p><span class="highlight">Twitter:</span> @antonimasso</p>
+            </div>
+            <div class="span6">
+                <div class="alert alert-success hide contact-success">
+                    <a class="close" data-dismiss="alert">&times;</a>
+                    
+                </div>
+                <div id="contact-form">
+                    <form method="post" action="">
+                      <fieldset>
+                        <label>Name*:</label>
+                        <input class="input-block-level" type="text" name="contact-name" id="contact-name" placeholder="First Name / Last Name">
+                        
+                        <label>Email*:</label>
+                        <input class="input-block-level" type="text" name="contact-email" id="contact-email" placeholder="email@address.com">
+                        
+                        <label>Subject:</label>
+                        <input class="input-block-level" type="text" name="contact-subject" id="contact-subject" placeholder="Enter a subject">
+                        
+                        <label>Message:</label>
+                        <textarea id="contact-message" class="input-block-level" name="contact-message" id="contact-message" rows="3"></textarea>
+                        
+                        <div class="row form-submit">
+                            <div class="span2">
+                                <button type="submit" id="send-contact">Send Email</button>
+                            </div>
+                            <div class="span4">
+                                <p class="form-info text-right">All fields with an * are required.</p>
+                            </div>
+                        </div>
+                        <input type="hidden" name="type" value="contact" />
+                      </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="scroll-top">
+            <a class="#" href="#"></a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <p class="donations text-center">Bitcoin donations: 1BPwydGmu5eSeK3c8XNCFaaCzBquJUDC1s</p>
+                    <p class="copyright text-center" >Copyright 2014 <a href="http://www.twitter.com/antonimasso" target="_blank" style="color: white;">@antonimasso</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.simpleplaceholder.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/jquery.keypad/jquery.keypad.js"></script>
+    
+  </body>
+</html>
